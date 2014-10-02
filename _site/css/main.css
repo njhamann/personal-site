@@ -2,7 +2,6 @@
   font weights: 300, 400, 600, 700, 800
 */
 body {
-  background: #edede8;
   font-family: 'Open Sans', sans-serif; }
 
 a {
@@ -14,7 +13,6 @@ a {
   margin-bottom: 20px;
   padding: 0px 20px 20px 20px;
   float: left;
-  box-shadow: -3px 3px 0px rgba(0, 0, 0, 0.2);
   width: 415px; }
   .about-container h2 {
     margin-bottom: 16px;
@@ -22,8 +20,6 @@ a {
     font-weight: 700;
     line-height: 50px;
     font-size: 35px; }
-    .about-container h2 span {
-      background: rgba(255, 255, 0, 0.49); }
   .about-container h4 {
     margin-top: 15px;
     font-weight: 600; }
