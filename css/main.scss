@@ -6,7 +6,8 @@
 */
 
 body{
-  font-family: 'Open Sans', sans-serif;
+  //font-family: 'Open Sans', sans-serif;
+  font-family: 'Vollkorn', serif;
 }
 a{
   color: #496985;
@@ -18,11 +19,8 @@ a{
   margin-bottom: 20px;
   padding: 0px 20px 20px 20px;
   float: left;
-  width: 415px;
   h2{
     margin-bottom: 16px;
-    width: 562px;
-    font-weight: 700;
     line-height: 50px;
     font-size: 35px;
     span{
@@ -30,7 +28,6 @@ a{
   }
   h4{
     margin-top: 15px;
-    font-weight: 600;
   }
   li{
     margin-left: 10px;
