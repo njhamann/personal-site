@@ -7,23 +7,60 @@ body {
 a {
   color: #496985; }
 
+input.form-control, textarea.form-control {
+  border-radius: 0; }
+
+pre {
+  border-radius: 0; }
+
+.header-container {
+  margin-top: 40px; }
+  .header-container h2 {
+    margin: 0 0 10px;
+    font-size: 29px; }
+    .header-container h2.last {
+      margin-bottom: 0; }
+  .header-container ul {
+    margin-top: 47px;
+    margin-bottom: 0px;
+    float: right;
+    padding: 0; }
+    .header-container ul li {
+      float: left;
+      margin: 0 10px 0 0;
+      font-size: 18px; }
+      .header-container ul li.current {
+        text-decoration: underline; }
+
+.tools .tools-navigation ul {
+  margin-left: 10px; }
+.tools .tools-container h3 {
+  margin-top: 0; }
+.tools .tools-container .epoch-tool input {
+  margin-bottom: 10px; }
+.tools .tools-container .json-lint-tool textarea {
+  margin-bottom: 10px; }
+
 .about-container {
   background: #FFF;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding: 0px 20px 20px 20px;
   float: left; }
   .about-container h2 {
-    margin-bottom: 16px;
-    line-height: 50px;
-    font-size: 35px; }
-  .about-container h4 {
-    margin-top: 15px; }
+    margin: 0 0 10px;
+    font-size: 29px; }
+    .about-container h2.last {
+      margin-bottom: 20px; }
   .about-container li {
     margin-left: 10px; }
 
-@media (max-width: 600px) {
+@media (max-width: 992px) {
+  .header-container ul {
+    float: left;
+    margin-top: 20px; }
+
   .about-container {
     width: auto; }
     .about-container h2 {
-      width: auto; } }
+      width: auto; }
+
+  .tools .tools-container {
+    margin-top: 30px; } }

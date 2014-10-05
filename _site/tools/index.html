@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="App">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Tools</title>
+    <title>Personal site for Noah Hamann</title>
     <meta name="description" content="I am a front-end engineer located in Minneapolis, MN.
 ">
 
@@ -16,14 +16,67 @@
   <link rel="canonical" href="http://noahhamann.com/tools/">
 </head>
 
-  <body>
-  <div class="home">
-Tools
+  <body ng-cloak>
+    <div class="container" ng-controller="App">
+      <div class="row header-container" ng-controller="Nav">
+  <div class="col-md-6">
+    <h2><span>My name is Noah Hamann.</span></h2>
+    <h2 class="last"><span>Welcome to my site.</span></h2>
+  </div>
+  <div class="col-md-6">
+    <ul class="list-unstyled">
+    
+      
+      
+      <li class=""><a href="/">Info</a></li>
+    
+      
+      
+        
+      
+      <li class="current"><a href="/tools/">Tools</a></li>
+    
+      
+      
+      <li class=""><a href="/blog/">Blog</a></li>
+    
+    </ul>
+  </div>
+</div>
+<div class="row">
+  <hr>
 </div>
 
-  <script>
-console.log('noahhamann.com');
-</script>
+      <div class="row tools" ng-controller="Tools">
+  <div class="col-md-3 tools-navigation">
+  <p>A collection of simple tools I find useful when building web applications.</p>
+  <p>Some of these tools have been borrowed or inspired by other open source projects and will be noted below.</p>
+  <ul class="list-unstyled">
+    <li><a href="/tools/epoch/">Epoch to date</a></li>
+    <li><a href="/tools/json/">JSON lint</a></li>
+  </ul>
+  <p>More tools to come.</p>
+</div>
+
+  <div class="col-md-9 tools-container">
+    <div class="epoch-tool" ng-controller="ToolsEpoch">
+      <h3>Epoch to date converter</h3>
+      <p>Enter your epoch time and the human readable date will render. Add <code>?epoch=[epoch time]</code> to the url above for a shortcut.</p>
+      <input ng-model="epoch" class="form-control" placeholder="enter epoch">
+      <dl class="dl-horizontal">
+        <dt>Seconds</dt>
+        <dd ng-bind="(epoch | epochToDateString) || 'No valid epoch entered'"></dd>
+        <dt>Milliseconds</dt>
+        <dd ng-bind="(epoch | milliToDateString) || 'No valid epoch entered'"></dd>
+      </dl>
+    </div>
+  </div>
+</div><!-- row -->
+
+    </div><!-- container -->
+    <script src="/bower_components/angular/angular.min.js"></script>
+<script src="/bower_components/angular-route/angular-route.min.js"></script>
+<script src="/js/core.js"></script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

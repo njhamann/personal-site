@@ -1,0 +1,16 @@
+---
+permalink: /tools/json/
+---
+
+<div class="row tools" ng-controller="Tools">
+  {% include tools/nav.html %}
+  <div class="col-md-9 tools-container">
+    <div class="json-lint-tool" ng-controller="ToolsJSONLint">
+      <h3>JSON lint</h3>
+      <p>Enter your JSON to view it in a clean and readable format.</p>
+      <textarea ng-model="json" class="form-control" placeholder="enter json"></textarea>
+      <pre ng-bind="prettyJSON" ng-show="prettyJSON"></pre>
+      <p ng-bind="error"></p>
+    </div>
+  </div>
+</div><!-- row -->

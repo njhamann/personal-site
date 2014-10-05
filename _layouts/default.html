@@ -1,8 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="App">
   {% include head.html %}
-  <body>
-  {{ content }}
-  {% include scripts.html %}
+  <body ng-cloak>
+    <div class="container" ng-controller="App">
+      {% include header.html %}
+      {{ content }}
+    </div><!-- container -->
+    {% include scripts.html %}
   </body>
 </html>

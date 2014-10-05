@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>About</title>
+    <title>Personal site for Noah Hamann</title>
     <meta name="description" content="I am a front-end engineer located in Minneapolis, MN.
 ">
 
@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="/bower_components/fontawesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://noahhamann.com/about/">
+  <link rel="canonical" href="http://noahhamann.com/tools/json/">
 </head>
 
   <body ng-cloak>
@@ -45,22 +45,27 @@
   <hr>
 </div>
 
-      <div class="post">
-
-  <header class="post-header">
-    <h1 class="post-title">About</h1>
-  </header>
-
-  <article class="post-content">
-    <p>This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at <a href="http://jekyllrb.com/">jekyllrb.com</a></p>
-
-<p>You can find the source code for the Jekyll new theme at: <a href="https://github.com/jglovier/jekyll-new">github.com/jglovier/jekyll-new</a></p>
-
-<p>You can find the source code for Jekyll at <a href="https://github.com/jekyll/jekyll">github.com/jekyll/jekyll</a></p>
-
-  </article>
-
+      <div class="row tools" ng-controller="Tools">
+  <div class="col-md-3 tools-navigation">
+  <p>A collection of simple tools I find useful when building web applications.</p>
+  <p>Some of these tools have been borrowed or inspired by other open source projects and will be noted below.</p>
+  <ul class="list-unstyled">
+    <li><a href="/tools/epoch/">Epoch to date</a></li>
+    <li><a href="/tools/json/">JSON lint</a></li>
+  </ul>
+  <p>More tools to come.</p>
 </div>
+
+  <div class="col-md-9 tools-container">
+    <div class="json-lint-tool" ng-controller="ToolsJSONLint">
+      <h3>JSON lint</h3>
+      <p>Enter your JSON to view it in a clean and readable format.</p>
+      <textarea ng-model="json" class="form-control" placeholder="enter json"></textarea>
+      <pre ng-bind="prettyJSON" ng-show="prettyJSON"></pre>
+      <p ng-bind="error"></p>
+    </div>
+  </div>
+</div><!-- row -->
 
     </div><!-- container -->
     <script src="/bower_components/angular/angular.min.js"></script>

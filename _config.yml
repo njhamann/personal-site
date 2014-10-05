@@ -10,3 +10,19 @@ github_username:  njhamann
 
 # Build settings
 markdown: kramdown
+strings:
+  coming_soon: "coming soon"
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+      title: "Personal site for Noah Hamann"
+navigation:
+  - text: Info
+    url: /
+  - text: Tools
+    url: /tools/
+  - text: Blog
+    url: /blog/
